@@ -1,0 +1,20 @@
+# 白名单模式：默认忽略一切，只放行 reference 目录下的 mp3
+# 以后想放行别的文件，照着最后一行的写法加一条 !/路径 即可
+#
+# 注意：.gitignore 只对「未跟踪」的文件生效。
+# reference/reference.mp3 已经提交过了，不受这里规则影响。
+
+# 1) 忽略根目录下所有文件和目录
+/*
+
+# 2) 但 .gitignore 自己要保留
+!/.gitignore
+
+# 3) 放行 reference 目录本身（父目录被忽略时，子文件的放行规则无效）
+!/reference/
+
+# 4) reference 目录内的内容先全部忽略
+/reference/*
+
+# 5) 只放行 reference 下的 mp3
+!/reference/*.mp3
