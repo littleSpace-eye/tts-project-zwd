@@ -18,3 +18,6 @@
 
 # 5) 只放行 reference 下的 mp3
 !/reference/*.mp3
+
+# 6) 放行 reference 下的 png（小智角色设定图，供外部 CDN 引用）
+!/reference/*.png
